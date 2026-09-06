@@ -1,0 +1,18 @@
+{
+  "name": "First Last",
+  "source_cv": "profile/cv/master-external.docx",
+  "config_dir": "tailoring-configs",
+  "out_dir": "tailored",
+  "line_budget": 52,
+  "anchors": {
+    "contact_line": "Email:",
+    "section_header": "EDUCATION",
+    "body_line": "Bachelor of",
+    "personal_projects_header": "PERSONAL PROJECTS",
+    "job_header_table": "",
+    "project_title_prefix": "Project 1",
+    "project_prefix": "Project "
+  },
+  "extract_docx_glob": "profile/cv/*MASTER*.docx",
+  "extract_out": "profile/cv-master.md"
+}
