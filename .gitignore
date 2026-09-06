@@ -1,0 +1,19 @@
+# --- user data: NEVER commit ---
+profile/cv/
+profile/context.md
+profile/truthfulness.md
+profile/search-contract.md
+profile/tailor.json
+tailoring-configs/*.json
+!tailoring-configs/job-example.json
+tailored/
+jobs/*.md
+!jobs/_template.md
+tracker.md
+weekly-search.log
+reports/
+
+# --- junk ---
+~$*
+__pycache__/
+*.pyc
