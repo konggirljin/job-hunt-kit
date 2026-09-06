@@ -26,7 +26,8 @@ document** your recruiter will open:
   boards weekly (or any cadence you set), dedupes, and brings you a
   shortlist.
 - **Auto fit-score.** Every JD gets a match score, gap analysis, and red-flag
-  check — so you spend effort only on roles worth it.- **Auto CV writing + tailoring.** From a per-job config, it generates the
+  check — so you spend effort only on roles worth it.
+- **Auto CV writing + tailoring.** From a per-job config, it generates the
   tailored `.docx`, reorders your strongest experiences, and ATS-optimizes
   keywords — all while keeping claims truthful (no invented numbers).
 - **Chrome control that saves your time.** With a browser-controlling agent
@@ -35,6 +36,49 @@ document** your recruiter will open:
   time judging, not copy-pasting.
 - **Full pipeline, one place.** Search → analyze → tailor → verify → track.
   Everything lives as files, so any fresh agent session picks up mid-hunt.
+
+---
+
+## 🚀 Never used git / GitHub / agents before? START HERE
+
+If this is all new to you, **skip the rest of this page for now.** Just copy
+the block below and paste it into any AI assistant you already use (Claude,
+Codex, opencode, ChatGPT…). It will guide you through the entire setup from
+zero — you'll only need to put your CV into a folder and answer questions.
+Your AI follows the same guide the kit ships for its own agents:
+`docs/getting-started.md`.
+
+> **⬇️ COPY EVERYTHING IN THIS BOX ⬇️**
+
+```text
+You are going to set up "job-hunt-kit" for me from scratch. I have ZERO
+experience with GitHub, git, the command line, Python, or AI agents — so
+please do everything for me or explain each step in plain non-technical
+English.
+
+This is the project: https://github.com/konggirljin/job-hunt-kit
+
+Here is what AI should do:
+1. First, follow the guide in docs/getting-started.md in that repo — it tells
+   YOU how to guide a total beginner.
+2. Tell me exactly what files I need to prepare, how to set up git repo in my PC. I understand I need at least
+   my CV as a .docx file. Explain how to get a .docx if I only have a PDF.
+3. Walk me through getting the github kit onto my computer, one step at a time.
+4. Help me fill the "profile" folder (my CV, my truthfulness notes, any extra
+   context about me, my job-search preferences) by asking me questions.
+5. Set up my AI agent so it can use the kit's skills.
+6. [Optional] After setting up, AI can ask me if I would like to run the built-in test and show me it works, and demo one real task
+   (like "tailor my CV" or "search jobs") so I know how to use it going
+   forward.
+
+Important: assume I know nothing, never use git before — define every term, do the technical steps
+for me where you can, and only make me type things when it's truly necessary.
+Start by telling me what to do next.
+```
+
+Already comfortable with git? Head straight to [Quickstart](#quickstart-5-minutes).
+
+---
 
 ## What's inside
 
@@ -68,45 +112,6 @@ weekly sweep   resume-tailor ──▶ tailored/<name>_<Company> <Position>.docx
      ▼              ▼                    ▼
   you pick    change log + ATS report ─▶ tracker.md
 ```
-
-## Brand new to git / GitHub / agents? Let your AI set it up
-
-You don't need to know any of this. Copy-paste the prompt below into your AI
-assistant (Claude, Codex, opencode, ChatGPT…) and it will walk you through
-everything from zero — the only things you'll personally do are drop your CV
-into a folder and answer questions. Your AI follows the same guide the kit's
-own agents use: `docs/getting-started.md`.
-
-<details>
-<summary>Click to reveal the copy-paste prompt</summary>
-
-```text
-You are going to set up "job-hunt-kit" for me from scratch. I have ZERO
-experience with GitHub, git, the command line, Python, or AI agents — so
-please do everything for me, or explain each step in plain, non-technical
-language.
-
-This is the project: <paste the git clone URL or GitHub repo link here>
-
-Here is what I want:
-1. First, follow the guide in docs/getting-started.md in that repo — it tells
-   YOU how to guide a total beginner like me.
-2. Tell me exactly what files I need to prepare. I understand I need at least
-   my CV as a .docx file. Explain how to produce a .docx if I only have a PDF.
-3. Walk me through getting the kit onto my computer, one step at a time.
-4. Help me fill the "profile" folder (my CV, my truthfulness notes, any extra
-   context about me, my job-search preferences).
-5. Set up my AI agent so it can use the kit's skills.
-6. Then run the built-in test and show me it works, and demo one real task
-   (like "tailor my CV" or "search jobs") so I know how to use it going
-   forward.
-
-Important: assume I know nothing — define every term, do the technical steps
-for me where you can, and only make me type things when truly necessary.
-Start by telling me what to prepare.
-```
-
-</details>
 
 ## Quickstart (5 minutes)
 
