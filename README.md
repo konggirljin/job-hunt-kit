@@ -2,10 +2,11 @@
 
 **[English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md)**
 
-> An **all-in-one, AI-driven job-hunt machine**. It finds jobs for you, scores
-> your fit, writes and tailors your CV as a **real one-page Word document**,
-> ATS-checks it, tracks every application — and, via Chrome control, can run
-> the whole grunt work end-to-end and stop only at the final "submit" click.
+> An **all-in-one, AI-driven job-hunt machine**, built during a real job hunt.
+> It finds jobs for you, scores your fit, writes and tailors your CV as a
+> **real one-page Word document**, ATS-checks it, tracks every application —
+> and, via Chrome control (e.g. Codex), runs the whole grunt work end-to-end,
+> stopping only at the final "submit" click.
 
 Built while running a real, ongoing job hunt. Every lesson in here was paid
 for in a missed page-count or a wrongly-declared "skill gap".
@@ -22,10 +23,10 @@ document** your recruiter will open:
   the real Word file and measures it with Word's own page/line statistics so
   you *know* it's one page. No font bugs, no drift.
 - **Auto job search.** Point it at your target market and it sweeps the
-  boards weekly (or on demand), dedupes, and brings you a shortlist.
+  boards weekly (or any cadence you set), dedupes, and brings you a
+  shortlist.
 - **Auto fit-score.** Every JD gets a match score, gap analysis, and red-flag
-  check — so you spend effort only on roles worth it.
-- **Auto CV writing + tailoring.** From a per-job config, it generates the
+  check — so you spend effort only on roles worth it.- **Auto CV writing + tailoring.** From a per-job config, it generates the
   tailored `.docx`, reorders your strongest experiences, and ATS-optimizes
   keywords — all while keeping claims truthful (no invented numbers).
 - **Chrome control that saves your time.** With a browser-controlling agent
@@ -43,12 +44,12 @@ document** your recruiter will open:
 | `skills/resume-tailor` | The full loop: config-driven docx build → one-page fit → ATS keyword check → change log |
 | `skills/job-search` | Contract-driven weekly sweeps; **present-before-persist** (agent shortlists, YOU decide what's saved) |
 | `skills/one-page-cv` | Shrink an overflowing CV onto exactly one page, verified with Word |
-| `profile/` | Your private layer (gitignored): CVs, context, truthfulness calibration, search contract |
+| `profile/` | Your personal files (gitignored — never pushed to GitHub): CVs, context, truthfulness calibration, search contract |
 | `scripts/tailor.py` | Config-driven CV builder — produces a real `.docx`, preserves formatting |
-| `scripts/verify_one_page.py/.ps1` | Word doc-level page/line verification (the only stats that don't lie) |
+| `scripts/verify_one_page.py/.ps1` | Word page/line verification |
 | `scripts/extract_master.py` | docx → markdown capability-inventory sync |
 | `scripts/register-weekly-search.ps1` | Windows Task Scheduler: weekly automated job-search sweep |
-| `docs/browser-and-scheduling-tips.md` | Chrome-control tips + how to let the AI do everything but the final click |
+| `docs/browser-and-scheduling-tips.md` | Chrome-control tips for guiding AI through job boards |
 | `AGENTS.md` | The workspace conventions your agent reads |
 
 ## The workflow
@@ -67,6 +68,45 @@ weekly sweep   resume-tailor ──▶ tailored/<name>_<Company> <Position>.docx
      ▼              ▼                    ▼
   you pick    change log + ATS report ─▶ tracker.md
 ```
+
+## Brand new to git / GitHub / agents? Let your AI set it up
+
+You don't need to know any of this. Copy-paste the prompt below into your AI
+assistant (Claude, Codex, opencode, ChatGPT…) and it will walk you through
+everything from zero — the only things you'll personally do are drop your CV
+into a folder and answer questions. Your AI follows the same guide the kit's
+own agents use: `docs/getting-started.md`.
+
+<details>
+<summary>Click to reveal the copy-paste prompt</summary>
+
+```text
+You are going to set up "job-hunt-kit" for me from scratch. I have ZERO
+experience with GitHub, git, the command line, Python, or AI agents — so
+please do everything for me, or explain each step in plain, non-technical
+language.
+
+This is the project: <paste the git clone URL or GitHub repo link here>
+
+Here is what I want:
+1. First, follow the guide in docs/getting-started.md in that repo — it tells
+   YOU how to guide a total beginner like me.
+2. Tell me exactly what files I need to prepare. I understand I need at least
+   my CV as a .docx file. Explain how to produce a .docx if I only have a PDF.
+3. Walk me through getting the kit onto my computer, one step at a time.
+4. Help me fill the "profile" folder (my CV, my truthfulness notes, any extra
+   context about me, my job-search preferences).
+5. Set up my AI agent so it can use the kit's skills.
+6. Then run the built-in test and show me it works, and demo one real task
+   (like "tailor my CV" or "search jobs") so I know how to use it going
+   forward.
+
+Important: assume I know nothing — define every term, do the technical steps
+for me where you can, and only make me type things when truly necessary.
+Start by telling me what to prepare.
+```
+
+</details>
 
 ## Quickstart (5 minutes)
 
@@ -145,11 +185,12 @@ You keep the decisions; the AI keeps the typing. Full recipe in
 2. **The agent proposes, you dispose.** Present-before-persist everywhere:
    shortlists before saves, change logs before submissions, `[to fill]`
    before invented numbers.
-3. **Truthfulness is calibrated, not absolute.** A 1-page CV is a
-   condensation; the exhaustive inventory (`profile/cv-master.md`) is the
-   real capability list. Gaps are judged against experience, and uncertain
-   claims become a question, never a silent assumption
-   (`profile/truthfulness.md`).
+3. **Calibrated honesty — not naive literalism.** A one-page CV is a
+   condensed highlight, not the full record. Judge whether a gap is real by
+   your actual work experience, and treat basic skills (e.g. MS Office) as
+   assumed — so the AI doesn't mistake over-literal reading for honesty and
+   lose common sense. When something is genuinely uncertain, the AI stops
+   and asks you (`profile/truthfulness.md`).
 4. **One page, verified.** Page counts are measured with Word doc-level
    statistics every time — per-paragraph stats skip table lines and lie.
 5. **The workspace never holds your secrets in git.** Everything personal is
