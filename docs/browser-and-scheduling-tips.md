@@ -31,6 +31,42 @@ mechanism. Tips that make it actually good:
 - **Respect robots/ToS.** Keep browsing human-paced (a handful of pages per
   sweep), no bulk scraping.
 
+### The end-to-end "let it do everything but the final click" mode
+
+Why stop at shortlisting? Once your profile is on file, a browser-driving
+agent can carry an application almost to the finish line:
+
+1. **Search + shortlist** (above).
+2. **Draft the application** — tailored CV (`resume-tailor`) + answers to
+   the form's essay questions, built from `profile/cv-master.md` and
+   `profile/context.md`.
+3. **Auto-fill the form itself** — name, email, phone, address, work history,
+   education, upload the tailored `.docx`/`.pdf`. The agent reads each field
+   label and fills it from your profile, pasting JD-specific answers where a
+   free-text box needs them.
+4. **One human checkpoint.** The agent stops with the fully-filled form open
+   and reports a diff of what it entered ("I filled: name, address, uploaded
+   Resume_Example_Corp.pdf; I left salary blank for you to decide"). You
+   review once → click submit. (Or instruct it: "submit only after I approve".)
+
+Why keep the final human click, even though it could click submit?
+
+- **Legally & morally, applications are your assertion of truth.** You must
+  be the one who confirms the claims before they're sent under your name.
+- **The last 30 seconds of human review are cheap insurance** against a
+  hallucinated date, a wrong salary figure, or a mis-selected title.
+- **You decide the answering strategy** (how to frame gaps, what salary to
+  put, whether to disclose) — the agent proposes, you dispose, everywhere.
+
+Practical setup notes:
+
+- Keep `profile/context.md` current with everything the agent may need to
+  fill (right-to-work, notice period, salary floor, address, references).
+- Ask the agent to **drift-check before filling** — report a per-field
+  before/after so you can spot anything it inferred instead of read.
+- Tell it which fields to **never self-fill** (salary, anything it'd be
+  guessing on) so it blanks them rather than inventing values.
+
 ---
 
 ## 2. Weekly scheduled sweep (Windows)

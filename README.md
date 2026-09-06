@@ -1,13 +1,39 @@
 # job-hunt-kit
 
-An **agentic job-hunt workspace**: match analysis, contract-driven job
-search, one-page CV tailoring, ATS checks, and an application tracker —
-packaged as a kit of AI-agent skills + scripts. Clone it, fill in your
-profile, and your coding agent (opencode / Claude Code / Codex) becomes a
-disciplined job-hunt assistant.
+**[English](README.md) · [繁體中文](README.zh-Hant.md) · [简体中文](README.zh-Hans.md)**
 
-Built while running a real, ongoing job hunt — every lesson in here was paid
+> An **all-in-one, AI-driven job-hunt machine**. It finds jobs for you, scores
+> your fit, writes and tailors your CV as a **real one-page Word document**,
+> ATS-checks it, tracks every application — and, via Chrome control, can run
+> the whole grunt work end-to-end and stop only at the final "submit" click.
+
+Built while running a real, ongoing job hunt. Every lesson in here was paid
 for in a missed page-count or a wrongly-declared "skill gap".
+
+---
+
+## Why this one
+
+Most "AI CV tools" output a wall of text you must hand-format back into a
+resume. This kit is different because it operates on the **actual Word
+document** your recruiter will open:
+
+- **One-page `.docx`, verified.** Not "fits roughly one page." The kit edits
+  the real Word file and measures it with Word's own page/line statistics so
+  you *know* it's one page. No font bugs, no drift.
+- **Auto job search.** Point it at your target market and it sweeps the
+  boards weekly (or on demand), dedupes, and brings you a shortlist.
+- **Auto fit-score.** Every JD gets a match score, gap analysis, and red-flag
+  check — so you spend effort only on roles worth it.
+- **Auto CV writing + tailoring.** From a per-job config, it generates the
+  tailored `.docx`, reorders your strongest experiences, and ATS-optimizes
+  keywords — all while keeping claims truthful (no invented numbers).
+- **Chrome control that saves your time.** With a browser-controlling agent
+  (Codex), it can open listings, read JDs, even fill in application forms by
+  itself — and hand off to you only for the final approval. You spent your
+  time judging, not copy-pasting.
+- **Full pipeline, one place.** Search → analyze → tailor → verify → track.
+  Everything lives as files, so any fresh agent session picks up mid-hunt.
 
 ## What's inside
 
@@ -18,10 +44,11 @@ for in a missed page-count or a wrongly-declared "skill gap".
 | `skills/job-search` | Contract-driven weekly sweeps; **present-before-persist** (agent shortlists, YOU decide what's saved) |
 | `skills/one-page-cv` | Shrink an overflowing CV onto exactly one page, verified with Word |
 | `profile/` | Your private layer (gitignored): CVs, context, truthfulness calibration, search contract |
-| `scripts/tailor.py` | Config-driven CV builder — preserves run formatting, no font bugs |
+| `scripts/tailor.py` | Config-driven CV builder — produces a real `.docx`, preserves formatting |
 | `scripts/verify_one_page.py/.ps1` | Word doc-level page/line verification (the only stats that don't lie) |
 | `scripts/extract_master.py` | docx → markdown capability-inventory sync |
 | `scripts/register-weekly-search.ps1` | Windows Task Scheduler: weekly automated job-search sweep |
+| `docs/browser-and-scheduling-tips.md` | Chrome-control tips + how to let the AI do everything but the final click |
 | `AGENTS.md` | The workspace conventions your agent reads |
 
 ## The workflow
@@ -95,6 +122,21 @@ powershell -ExecutionPolicy Bypass -File scripts\register-weekly-search.ps1
 Runs your agent headless once a week against your search contract and logs a
 **shortlist only** — nothing is saved until you pick. Details, Chrome-control
 tips (Codex), and task management: `docs/browser-and-scheduling-tips.md`.
+
+## Chrome control: let the AI do everything but the final click
+
+With a browser-driving agent (Codex's native Chrome control), the full loop
+handsfree:
+
+1. AI opens boards, reads JDs, dedupes, shortlists.
+2. AI drafts each application + tailored CV.
+3. AI fills the form fields (name already on file, address, work history,
+   the upload), pastes JD-specific answers.
+4. **One human checkpoint:** you review the filled form once, then click
+   submit. (Or tell the agent to submit only after you approve.)
+
+You keep the decisions; the AI keeps the typing. Full recipe in
+`docs/browser-and-scheduling-tips.md`.
 
 ## Design principles
 
