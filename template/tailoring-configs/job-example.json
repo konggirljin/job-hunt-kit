@@ -1,0 +1,15 @@
+{
+  "company": "Example Corp",
+  "position": "Business Analyst",
+  "summary": "One-line professional summary tailored to the JD.",
+  "skills": "Comma-separated skills line, JD keywords first.",
+  "project_order": [ { "find": "Project 2", "title": "Project 1 – Renamed" } ],
+  "reword": [ { "find": "Old bullet prefix", "text": "New bullet text of similar length" } ],
+  "first_bullet": [ { "title": "Project 1", "text": "New lead bullet for this project" } ],
+  "insert_after": [ { "find": "Some existing line", "text": "New plain paragraph line" } ],
+  "insert_bullet_after": [ { "find": "Some existing line", "text": "New bullet line" } ],
+  "insert_block_before": [ { "find": "Target line", "title": "Project 5 – New block", "bullets": ["bullet one", "bullet two"] } ],
+  "insert_job_before": [ { "find": "Target line", "title": "Company, Role", "date": "2026-01", "bullets": ["bullet one"] } ],
+  "remove_paras": [ { "find": "Prefix of paragraph to delete" } ],
+  "remove_personal_blocks": [ "Title of personal-project block to drop" ]
+}
